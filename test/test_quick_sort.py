@@ -25,7 +25,7 @@ class TestQuickSort(unittest.TestCase):
         self.assertEqual(sort.quick_sort(input_data), sorted(input_data))
 
     def test_quick_sort_gran_conjunto_aleatorio(self):
-        input_data = [random.randint(1, 1000000) for _ in range(1000)]
+        input_data = [random.randint(1, 1000000000) for _ in range(100000)]
         self.assertEqual(sort.quick_sort(input_data), sorted(input_data))
 
     def test_quick_sort_con_duplicados(self):
