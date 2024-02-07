@@ -1,4 +1,4 @@
-# Ejercicios algoritmos de ordenamiento | Programación Avanzada - Grupo 1
+# Ejercicios algoritmos de ordenamiento | Programación Avanzada - Grupo 2
 
 Este proyecto contiene implementaciones de algoritmos de ordenamiento para el curso de Programación Avanzada.
 
