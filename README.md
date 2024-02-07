@@ -9,13 +9,13 @@ Este proyecto contiene implementaciones de algoritmos de ordenamiento para el cu
 2. Clona el repositorio ejecutando el siguiente comando:
 
     ```bash
-    git clone https://github.com/nicolas-97/pa_2024_1s_sort_g1.git
+    git clone https://github.com/nicolas-97/pa_2024_1s_sort_g2.git
     ```
 
 3. Cambia al directorio del proyecto:
 
     ```bash
-    cd pa_2024_1s_sort_g1
+    cd pa_2024_1s_sort_g2
     ```
 
 ## Instrucciones para Codificar en el Módulo utils
