@@ -11,7 +11,7 @@ def shell_sort(vector):
             vector[j] = temp
         m //= 2
         
-        return vector
+    return vector
     
 def quick_sort(vector):
 
