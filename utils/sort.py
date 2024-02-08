@@ -12,9 +12,6 @@ def shell_sort(vector):
             vector[j]=base
         maximo//=2
     return(vector)
-lista = [34,56,78,22,31,20,11,9,8]
-z=shell_sort(lista)
-print(z)
 
 
 
@@ -26,9 +23,7 @@ def quick_sort(vector):
     derecha = [x for x in vector if x > pivote]
     mitad = [x for x in vector if x == pivote]
     return quick_sort(izquierda) + mitad + quick_sort(derecha)
-lista = [34,56,78,22,31,20,11,9,8]
-m=quick_sort(lista)
-print(m)
+
 
 
 def merge_sort(vector):
@@ -38,7 +33,5 @@ def merge_sort(vector):
         merge_sort(izquierda)
         merge_sort(derecha)
         vector[:] = sorted (izquierda+derecha)
-lista = [9,56,99,5,4,20,11,2,8]
-merge_sort(lista)
-print(lista)
+    return(vector)
 
