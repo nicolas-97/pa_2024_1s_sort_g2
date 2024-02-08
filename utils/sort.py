@@ -40,6 +40,7 @@ def merge_sort(Lista):
             Lista[k] = derecha[j]
             j += 1
             k += 1
+        return Lista
 
 
 def quick_sort(Lista):
