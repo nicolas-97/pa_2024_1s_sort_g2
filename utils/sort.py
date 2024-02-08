@@ -12,6 +12,7 @@ def shell_sort(vector):
     return vector
 
 def quick_sort(vector):
+
     if len(vector) < 1:
         return vector
     pivote = vector[0]
@@ -21,23 +22,31 @@ def quick_sort(vector):
     return quick_sort(menor) + medio + quick_sort(mayor)
 
 def merge_sort(vector):
-    if len(vector) <= 1:
-        return vector
-    mitad = len(vector) // 2
-    izq = merge_sort(vector[:mitad])
-    der = merge_sort(vector[mitad:])
-    return merge(izq, der)
-def merge (izq, der):
-    i, j= 0, 0
-    merged= []
+    if len(vector) > 1:
+        mid = len(vector) // 2
+        left = vector[:mid]
+        right = vector[mid:]
+        merge_sort(left)
+        merge_sort(right)
+        i = 0
+        j = 0
+        k = 0
+        
+        while i < len(left) and j < len(right):
+            if left[i] <= right[j]:
+              vector[k] = left[i]
+              i += 1
+            else:
+                vector[k] = right[j]
+                j += 1
+            k += 1
+        while i < len(left):
+            vector[k] = left[i]
+            i += 1
+            k += 1
 
-    while i < len(izq) and j < len(der):
-        if izq[i] <= der[j]:
-            merged.append(izq[i])
-            i+=1
-        else:
-            merged.append(der[j])
-    merged.extend(izq[i:])
-    merged.extend(der[j:])
-
-    return merged
+        while j < len(right):
+            vector[k]=right[j]
+            j += 1
+            k += 1
+    return vector
