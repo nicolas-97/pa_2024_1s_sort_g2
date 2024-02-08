@@ -1,25 +1,25 @@
 def shell_sort(vector):
     numero = len(vector)
-    na = numero // 2
+    br = numero // 2
 
-    while na > 0:
-        for i in range(na, numero):
-            pivote = vector[i]
+    while br > 0:
+        for i in range(br, numero):
+            temp = vector[i]
             j = i
 
-            while j >= na and vector[j - na] > pivote:
-                vector[j] >= vector[j - na]
-                j -= na
+            while j >= br and vector[j - br] > temp:
+                vector[j] = vector[j - br]
+                j -= br
 
-            vector[j] = pivote
+            vector[j] = temp
 
-        na //= 2
+        br //= 2
     return vector
 
 
 
 def quick_sort(vector):
-    if len(vector) <= 1:
+    if len(vector) < 1:
         return vector
     pivote = vector[0]
     izquierda = [x for x in vector if x < pivote]
@@ -27,7 +27,6 @@ def quick_sort(vector):
     mitad = [x for x in vector if x == pivote]
 
     return quick_sort(izquierda) + mitad + quick_sort(derecha)
-
 
 
 def merge_sort(vector):
@@ -39,6 +38,7 @@ def merge_sort(vector):
     derecha = merge_sort(vector[mitad:])
 
     return merge(izquierda, derecha)
+
 
 def merge(izquierda, derecha):
     resultado = []
@@ -56,4 +56,5 @@ def merge(izquierda, derecha):
     resultado.extend(derecha[j:])
 
     return resultado
+
 
